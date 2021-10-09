@@ -92,28 +92,6 @@ CREATE TABLE `cart` (
 
 -- --------------------------------------------------------
 
---
--- Table structure for table `categories`
---
-
-CREATE TABLE `categories` (
-  `cat_id` int(10) NOT NULL,
-  `cat_title` text NOT NULL,
-  `cat_top` text NOT NULL,
-  `cat_image` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `categories`
---
-
-INSERT INTO `categories` (`cat_id`, `cat_title`, `cat_top`, `cat_image`) VALUES
-(2, 'Feminine', 'no', 'feminelg.png'),
-(3, 'Kids', 'no', 'kidslg.jpg'),
-(4, 'Others', 'yes', 'othericon.png'),
-(5, 'Men', 'yes', 'malelg.png');
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `contact_us`
@@ -400,29 +378,9 @@ INSERT INTO `product_categories` (`p_cat_id`, `p_cat_title`, `p_cat_top`, `p_cat
 
 -- --------------------------------------------------------
 
---
--- Table structure for table `store`
---
 
-CREATE TABLE `store` (
-  `store_id` int(10) NOT NULL,
-  `store_title` varchar(255) NOT NULL,
-  `store_image` varchar(255) NOT NULL,
-  `store_desc` text NOT NULL,
-  `store_button` varchar(255) NOT NULL,
-  `store_url` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `store`
---
 
-INSERT INTO `store` (`store_id`, `store_title`, `store_image`, `store_desc`, `store_button`, `store_url`) VALUES
-(4, 'London Store', 'store (3).jpg', '<p style=\"text-align: center;\"><strong>180-182 RECENTS STREET, LONDON, W1B 5BT</strong></p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut libero erat, aliquet eget mauris ut, dictum sagittis libero. Nam at dui dapibus, semper dolor ac, malesuada mi. Duis quis lobortis arcu. Vivamus sed sodales orci, non varius dolor.</p>', 'View Map', 'http://www.thedailylux.com/ecommerce'),
-(5, 'New York Store', 'store (1).png', '<p style=\"text-align: center;\"><strong>109 COLUMBUS CIRCLE, NEW YORK, NY10023</strong></p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut libero erat, aliquet eget mauris ut, dictum sagittis libero. Nam at dui dapibus, semper dolor ac, malesuada mi. Duis quis lobortis arcu. Vivamus sed sodales orci, non varius dolor.</p>', 'View Map', 'http://www.thedailylux.com/ecommerce'),
-(6, 'Paris Store', 'store (2).jpg', '<p style=\"text-align: center;\"><strong>2133 RUE SAINT-HONORE, 75001 PARIS&nbsp;</strong></p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut libero erat, aliquet eget mauris ut, dictum sagittis libero. Nam at dui dapibus, semper dolor ac, malesuada mi. Duis quis lobortis arcu. Vivamus sed sodales orci, non varius dolor.</p>', 'View Map', 'http://www.thedailylux.com/ecommerce');
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `terms`
@@ -495,10 +453,7 @@ ALTER TABLE `cart`
   ADD PRIMARY KEY (`p_id`);
 
 --
--- Indexes for table `categories`
---
-ALTER TABLE `categories`
-  ADD PRIMARY KEY (`cat_id`);
+
 
 --
 -- Indexes for table `contact_us`
@@ -561,16 +516,8 @@ ALTER TABLE `product_categories`
   ADD PRIMARY KEY (`p_cat_id`);
 
 --
--- Indexes for table `store`
---
-ALTER TABLE `store`
-  ADD PRIMARY KEY (`store_id`);
 
 --
--- Indexes for table `terms`
---
-ALTER TABLE `terms`
-  ADD PRIMARY KEY (`term_id`);
 
 --
 -- Indexes for table `wishlist`
@@ -598,10 +545,7 @@ ALTER TABLE `admins`
 ALTER TABLE `bundle_product_relation`
   MODIFY `rel_id` int(10) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `categories`
---
-ALTER TABLE `categories`
-  MODIFY `cat_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+-
 --
 -- AUTO_INCREMENT for table `contact_us`
 --
@@ -653,16 +597,8 @@ ALTER TABLE `products`
 ALTER TABLE `product_categories`
   MODIFY `p_cat_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
--- AUTO_INCREMENT for table `store`
---
-ALTER TABLE `store`
-  MODIFY `store_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
---
--- AUTO_INCREMENT for table `terms`
---
-ALTER TABLE `terms`
-  MODIFY `term_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
+
+
 -- AUTO_INCREMENT for table `wishlist`
 --
 ALTER TABLE `wishlist`
